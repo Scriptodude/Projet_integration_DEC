@@ -1,0 +1,70 @@
+﻿<Window x:Class="Menu_Principal.Parametres"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Parametres" Height="840" Width="1200" Background="WhiteSmoke" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
+    <StackPanel Height="792" VerticalAlignment="Top">
+        <TextBlock FontFamily="Gill Sans" Text="Mode de mouvement" Margin="174,10" Foreground="Chocolate" FontWeight="ExtraBold" FontSize="22" TextAlignment="Center" TextDecorations="Underline" ToolTip="Salut"/>
+        <StackPanel Orientation="Horizontal" Height="106">
+            <CheckBox FontSize="20" BorderBrush="DarkOrange" IsChecked="True" Name="CheckBox_Constant" Content="Constant"  Margin="420,32,60,32" Width="106" Click="CheckBox_Constant_Click" />
+            <CheckBox FontSize="20" BorderBrush="DarkOrange" Name="CheckBox_Angle" Content="Variation de l'angle" Width="192" Click="CheckBox_Angle_Click" Margin="0,32" />
+        </StackPanel>
+        <TextBlock FontFamily="Gill Sans" Text="Angle mort en degrés" Margin="174,10" Foreground="Chocolate" FontWeight="ExtraBold" FontSize="22" TextAlignment="Center" TextDecorations="Underline" Height="53" />
+        <StackPanel Orientation="Horizontal" >
+            <Button Name="btn_AngleX_Minus" FontFamily="Gill Sans" Content="-" FontSize="20" Height="30" Width="30" Margin="145,0,50,0" Click="Btn_AngleX_Minus"/>
+            <TextBlock  Text="Selon X" FontWeight="ExtraBold" FontSize="12" />
+            <Button FontFamily="Gill Sans" Content="+" Height="30" Width="30" FontSize="20" Margin="40,0,50,0" Click="Btn_AngleX_Plus"/>
+            <Button Name="btn_AngleY_Minus" FontFamily="Gill Sans" Content="-" FontSize="20" Height="30" Width="30" Margin="100,0,50,0" Click="Btn_AngleY_Minus"/>
+            <TextBlock Text="Selon Y" FontWeight="ExtraBold" FontSize="12" />
+            <Button Name="btn_AngleY_Plus" FontFamily="Gill Sans" Content="+" FontSize="20" Height="30" Width="30" Margin="40,0,50,0" Click="Btn_AngleY_Plus"/>
+            <Button Name="btn_AngleZ_Minus" FontFamily="Gill Sans" Content="-" FontSize="20" Height="30" Width="30" Margin="65,0,45,0" Click="Btn_AngleZ_Minus"/>
+            <TextBlock Text="Selon Z"  FontWeight="ExtraBold" FontSize="12" />
+            <Button Name="btn_AngleZ_Plus" FontFamily="Gill Sans" Content="+" FontSize="20" Height="30" Width="30" Margin="40,0,50,0" Click="Btn_AngleZ_Plus"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="103">
+
+            <Slider Value="15" Width="200" Margin="140,10,0,0" Name="sld_AngleX" Minimum="5" Maximum="25" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="sld_AngleX_ValueChanged" />
+            <Label Content="15" Width="24" Margin="10,10,30,66" Name="Lbl_AngleX" FontWeight="ExtraBlack" />
+            <Slider Value="15" Width="200" Margin="78,10,0,0"  Name="sld_AngleY" Minimum="5" Maximum="25" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="sld_AngleY_ValueChanged"/>
+            <Label Content="15" Width="25" Margin="10,10,30,66" Name="Lbl_AngleY" FontWeight="ExtraBlack"/>
+            <Slider Value="15" Width="200" Margin="40,10,0,0"  Name="sld_AngleZ" Minimum="5" Maximum="25" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="sld_AngleZ_ValueChanged"/>
+            <Label Content="15" Width="25" Margin="10,10,30,66" Name="Lbl_AngleZ" FontWeight="ExtraBlack"/>
+        </StackPanel>
+        <TextBlock FontFamily="Gill Sans" x:Name="TxtBlock_Vitesse" Text="Vitesse du curseur" Margin="174,20" Foreground="Chocolate" FontWeight="ExtraBold" FontSize="22" TextAlignment="Center" TextDecorations="Underline" Height="41" />
+        <StackPanel Orientation="Horizontal" >
+            <Button FontFamily="Gill Sans" Content="-" FontSize="20" Height="30" Width="30" Margin="145,0,50,0" Name="btn_VitesseX_Minus" Click="Btn_VitesseX_Minus"/>
+            <TextBlock Text="Selon X" FontWeight="ExtraBold" FontSize="12" />
+            <Button FontFamily="Gill Sans" Content="+" FontSize="20" Height="30" Width="30" Margin="40,0,50,0" Name="btn_VitesseX_Plus" Click="Btn_VitesseX_Plus"/>
+            <Button FontFamily="Gill Sans" Content="-" FontSize="20" Height="30" Width="30" Margin="100,0,50,0" Name="btn_VitesseY_Minus" Click="Btn_VitesseY_Minus"/>
+            <TextBlock Text="Selon Y" FontWeight="ExtraBold" FontSize="12" />
+            <Button FontFamily="Gill Sans" Content="+" FontSize="20" Height="30" Width="30" Margin="40,0,50,0" Name="btn_VitesseY_Plus" Click="Btn_VitesseY_Plus"/>
+            <Button FontFamily="Gill Sans" Content="-" FontSize="20" Height="30" Width="30" Margin="60,0,50,0" Name="btn_VitesseZ_Minus" Click="Btn_VitesseZ_Minus"/>
+            <TextBlock Text="Selon Z" FontWeight="ExtraBold" FontSize="12" />
+            <Button FontFamily="Gill Sans" Content="+" FontSize="20" Height="30" Width="30" Margin="40,0,50,0" Name="btn_VitesseZ_Plus" Click="Btn_VitesseZ_Plus"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="89">
+            <Slider Value="5" Width="200" Margin="140,10,0,0" Name="sld_VitesseX" Minimum="2" Maximum="8" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="sld_VitesseX_ValueChanged"/>
+            <Label Width="23" Margin="10,10,30,55" Name="lbl_VitesseX" Content="5" FontWeight="ExtraBlack"/>
+            <Slider Value="5" Width="200" Margin="78,10,0,0"  Name="sld_VitesseY" Minimum="2" Maximum="8" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="sld_VitesseY_ValueChanged"/>
+            <Label Width="23" Margin="10,10,30,55" Name="lbl_VitesseY" Content="5" FontWeight="ExtraBlack"/>
+            <Slider Value="5" Width="200" Margin="40,10,0,0"  Name="sld_VitesseZ" Minimum="2" Maximum="8" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="sld_VitesseZ_ValueChanged"/>
+            <Label Width="25" Margin="10,10,30,55" Name="lbl_VitesseZ" Content="5" FontWeight="ExtraBlack"/>
+        </StackPanel>
+
+        <TextBlock FontFamily="Gill Sans" Visibility="Hidden"  Text="Sensibilité du curseur" Name="txtBlockSens" ToolTip="Plus la valeur est élevée, moins le curseur sera sensible" Margin="174,0" Foreground="Chocolate" FontWeight="ExtraBold" FontSize="22" TextAlignment="Center" TextDecorations="Underline" Height="59" />
+        <StackPanel Orientation="Horizontal">
+            <Button Visibility="Hidden" Name="btn_senseMinus" FontFamily="Gill Sans" Content="-" FontSize="20" Height="30" Width="30" Margin="495,0,130,0" Click="Btn_Sense_Minus"/>
+            <Button Visibility="Hidden" Name="btn_sensePlus" FontFamily="Gill Sans" Content="+" FontSize="20" Height="30" Width="30"  Click="Btn_Sense_Plus"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Height="66">
+            <Slider Visibility="Hidden"  Value="6" Width="200" Margin="490,20,0,0" Name="sld_Sens" Minimum="1" Maximum="10" IsSnapToTickEnabled="True" TickFrequency="1" ValueChanged="sld_Sens_ValueChanged"/>
+            <Label Visibility="Hidden"   Width="25" Margin="10,20,10,19" Name="lbl_Sens" Content="6" FontWeight="ExtraBlack"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Height="101">
+            <Button ToolTip="En cliquant sur ce bouton, les données reviendront à leurs valeurs initiales et seront enregistrées." Content="Reinitialiser" FontSize="15" BorderBrush="Goldenrod" Click="ButtonInitialize_Click"  Margin="315,30,60,36" Width="144" />
+            <Button ToolTip="En cliquant sur ce bouton, les données à l'écran seront enregistrées." Content="Enregistrer" FontSize="15" BorderBrush="Goldenrod" Click="ButtonSave_Click"  Margin="0, 30, 60, 36" Width="145"/>
+            <Button ToolTip="En cliquant sur ce bouton, vous reviendrez à l'écran principal." Content="Revenir au menu" FontSize="15" BorderBrush="Goldenrod" Click="ButtonQuit_Click"  Margin="0, 30, 0, 36" Width="145"/>
+        </StackPanel>
+
+    </StackPanel>
+</Window>

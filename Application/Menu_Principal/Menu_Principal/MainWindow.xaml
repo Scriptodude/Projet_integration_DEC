@@ -1,0 +1,20 @@
+﻿<Window x:Class="Menu_Principal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Menu principal" Background="AntiqueWhite" ResizeMode="NoResize" Name="EcranPrincipal" Width="1400" Height="850" WindowStartupLocation="CenterScreen">
+    <StackPanel>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="fond_menu.jpg"/> 
+        </StackPanel.Background>
+        <TextBlock FontFamily="Bauhaus 93" Text="Simulation du tir à l'arc" Foreground="Black" FontWeight="ExtraBold" FontSize="80" Margin="0,50, 0, 0" TextAlignment="Center" TextDecorations="Underline" Height="186"/>
+        <Button FontFamily="Forte"   Content="À l'aide du gant, tentez votre chance au tir à l'arc!&#xa;                Cliquer ici pour commencer."  FontSize="25" BorderBrush="Goldenrod" HorizontalAlignment="Center" Margin="180,0,664,400" Width="550" Height="79" Click="StartBowGame">
+        </Button>
+        <StackPanel Orientation="Horizontal" Height="44">
+            <Button ToolTip="En cliquant ici, vous accèderez à une interface où vous pourrez changer les caractéristiques de déplacement du curseur par rapport au gant." Content="Paramètres" FontFamily="Bauhaus 93" FontSize="25" Margin="240, 0, 140,0" Width="145" BorderBrush="Goldenrod" Click="Button_Click_1"/>
+            <Button Content="Quitter" FontFamily="Bauhaus 93" FontSize="25"  Width="145" BorderBrush="Goldenrod" Click="Button_Click" />
+        </StackPanel>
+
+
+    </StackPanel>
+</Window>
+
